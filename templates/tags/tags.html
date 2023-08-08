@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+</head>
+<body>
+    <h1>Tags page</h1>
+    <ul>
+        {% for tag in tags %}
+            <li>{{tag}}</li>
+        {% endfor %}
+    </ul>
+    <h1>{{update.title}}</h1>
+</body>
+</html>

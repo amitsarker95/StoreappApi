@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Query practice</h1>
+    <hr>
+    <h2>Inventory price less then 20 and unit price is not less then 30 product's are :</h2>
+    <ul>
+        {% for item in products %}
+        <li>{{item.title}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <h2>Inventory is equal collection id product's are :</h2>
+    <ul>
+        {% for i in querys %}
+        <li>{{i.title}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <h1>Sorting data</h1>
+    <ul>
+        {% for i in sortdata %}
+        <li>{{i.title}}</li>
+        {% endfor %}
+    </ul>
+    <a href="#"><b>{{firstdata.title}}</b></a>
+    <br>
+    <a href="#"><b>{{first.title}}</b></a>
+    <br>
+    <a href="#"><b>{{last.title}}</b></a>
+    <br>
+    <br>
+    <h1>Data limitations</h1>
+    <ol>
+        {% for limit in limitdata %}
+        <li>{{limit.title}}</li>
+        {% endfor %}
+    </ol>
+
+    <br>
+    <br>
+    <h1>Values Dict</h1>
+    <ul>
+        {% for i in spacific %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <h1>Values List</h1>
+    <ul>
+        {% for i in spacificlist %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <h1>Orderd items</h1>
+    <ul>
+        {% for item in ordered %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    <h1>Orderd products</h1>
+    <ul>
+        {% for item in ordered_product %}
+        <li>{{item.title}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+    <h1>Orders Informations</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{order.id}}-{{order.customer.fast_name}}</li>
+        {% endfor %}
+    </ul>
+    <h1>Total product {{total_product}}</h1>
+
+    <ul>
+        {% for c in customer %}
+            <li>{{c.first_name}}-{{c.id}}</li>
+        {% endfor %}
+    </ul>
+
+    {% comment %} <h2>{{discount}}</h2> {% endcomment %}
+</body>
+</html>
